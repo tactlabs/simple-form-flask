@@ -15,24 +15,12 @@ def result():
     
     city  = request.form.get('city')
     
-    # You can validate the car brands. If someone is telling the wrong brand name, reply them with the wrong answer
-    
-    address = get_parked_place()
-    
-    ticket_amount = 45
-    
     user = {
         'city' : city
     }
     
     #return content
     return render_template('result.html', user=user)
-
-def get_parked_place():
-    return '288, Spadina Road'
-
-def get_ticket_amount():
-    return 45
 
 if __name__ == '__main__':
     host = os.environ.get('IP', '127.0.0.1')
