@@ -1,19 +1,32 @@
 <!DOCTYPE html>
   <html lang="en">
   <head>
-    <title>Friendship Meter</title>
+    
+    <title>Simple Form - Flask</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
   </head>
   <body>
+        
+    <section class="form-style-10">
+      <form action="/result" method="POST">
     
-    <form action="result" method="POST">
-    	
-    	<h4>Which City are you from?</h4>
-    
-   		<input type="text" name="city" placeholder="Type Your City"/>      	
-      	
-      	<input type="submit" value="Get City Info"/>
-      	
-    </form>    
+          <div class="section"><span>* </span>Which City are you from?</div>
+      
+          <div class="inner-wrap">
+              <label>City<input type="text" name="city" /></label>
+          </div>
+
+          <input type="submit" value="Submit"/>
+          
+      </form>
+
+      
+  </section>
     
 
   </body>
